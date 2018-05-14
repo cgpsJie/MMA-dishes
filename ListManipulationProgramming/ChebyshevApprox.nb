@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     35286,        683]
-NotebookOptionsPosition[     34122,        655]
-NotebookOutlinePosition[     34477,        671]
-CellTagsIndexPosition[     34434,        668]
+NotebookDataLength[     33150,        634]
+NotebookOptionsPosition[     32305,        611]
+NotebookOutlinePosition[     32660,        627]
+CellTagsIndexPosition[     32617,        624]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -607,50 +607,6 @@ WMf9iLxupH2rRa8O7lze3MTgq63DxxmrGvQ/jDh6hQ==
   3.735213612913286*^9, {3.7352136447891226`*^9, 3.7352136687155933`*^9}, {
    3.735213824759978*^9, 3.7352138399273767`*^9}},
  CellLabel->"Out[19]=",ExpressionUUID->"7221f748-ef21-41fd-8a10-efff8006620d"]
-}, Open  ]],
-
-Cell[BoxData["NIntegrate"], "Input",
- CellChangeTimes->{{3.735215753952592*^9, 
-  3.7352157562234764`*^9}},ExpressionUUID->"3978527f-cd1d-42d7-975a-\
-2c2e074caf22"],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[{
- RowBox[{
-  RowBox[{"n", "=", "5"}], ";", 
-  RowBox[{"precision", "=", "MachinePrecision"}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"{", 
-   RowBox[{"absc", ",", "weights", ",", "errweights"}], "}"}], "=", 
-  RowBox[{"NIntegrate`NewtonCotesRuleData", "[", 
-   RowBox[{"n", ",", "precision"}], "]"}]}]}], "Input",
- CellChangeTimes->{{3.735217396004405*^9, 3.7352174033356504`*^9}},
- CellLabel->"In[20]:=",ExpressionUUID->"0de0efb7-6981-4528-a9d8-39af126b6ad9"],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-   RowBox[{"{", 
-    RowBox[{
-    "0.`", ",", "0.125`", ",", "0.25`", ",", "0.375`", ",", "0.5`", ",", 
-     "0.625`", ",", "0.75`", ",", "0.875`", ",", "1.`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"0.03488536155202822`", ",", "0.20768959435626103`", ",", 
-     RowBox[{"-", "0.0327336860670194`"}], ",", "0.37022927689594354`", ",", 
-     RowBox[{"-", "0.16014109347442682`"}], ",", "0.37022927689594354`", ",", 
-     RowBox[{"-", "0.0327336860670194`"}], ",", "0.20768959435626103`", ",", 
-     "0.03488536155202822`"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"-", "0.04289241622574956`"}], ",", "0.20768959435626103`", ",", 
-     RowBox[{"-", "0.38828924162257494`"}], ",", "0.37022927689594354`", ",", 
-     RowBox[{"-", "0.29347442680776015`"}], ",", "0.37022927689594354`", ",", 
-     RowBox[{"-", "0.38828924162257494`"}], ",", "0.20768959435626103`", ",", 
-     RowBox[{"-", "0.04289241622574956`"}]}], "}"}]}], "}"}]], "Output",
- CellChangeTimes->{3.735217404412478*^9},
- CellLabel->"Out[21]=",ExpressionUUID->"db7f4021-800c-41b4-b9b2-5b6e6a132d2f"]
 }, Open  ]]
 },
 WindowSize->{759, 404},
@@ -670,24 +626,17 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 2006, 53, 264, "Input",ExpressionUUID->"b5bd0353-4ded-4f58-8bea-937decbbcd6f"],
-Cell[2567, 75, 346, 8, 45, "Input",ExpressionUUID->"3c690997-a81f-4f72-8c4c-5359867a9a51"],
+Cell[558, 20, 2006, 53, 210, "Input",ExpressionUUID->"b5bd0353-4ded-4f58-8bea-937decbbcd6f"],
+Cell[2567, 75, 346, 8, 28, "Input",ExpressionUUID->"3c690997-a81f-4f72-8c4c-5359867a9a51"],
 Cell[CellGroupData[{
-Cell[2938, 87, 381, 7, 45, "Input",ExpressionUUID->"7946217d-f876-43aa-8d44-0e15619d248b"],
+Cell[2938, 87, 381, 7, 28, "Input",ExpressionUUID->"7946217d-f876-43aa-8d44-0e15619d248b"],
 Cell[3322, 96, 962, 22, 52, "Output",ExpressionUUID->"b18083c7-a9b3-4964-8666-622986831396"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4321, 123, 539, 14, 45, "Input",ExpressionUUID->"cbdf4321-9326-49aa-a460-3e6b0825063e"],
+Cell[4321, 123, 539, 14, 28, "Input",ExpressionUUID->"cbdf4321-9326-49aa-a460-3e6b0825063e"],
 Cell[4863, 139, 27426, 469, 233, "Output",ExpressionUUID->"7221f748-ef21-41fd-8a10-efff8006620d"]
-}, Open  ]],
-Cell[32304, 611, 164, 3, 45, "Input",ExpressionUUID->"3978527f-cd1d-42d7-975a-2c2e074caf22"],
-Cell[CellGroupData[{
-Cell[32493, 618, 489, 11, 66, "Input",ExpressionUUID->"0de0efb7-6981-4528-a9d8-39af126b6ad9"],
-Cell[32985, 631, 1121, 21, 90, "Output",ExpressionUUID->"db7f4021-800c-41b4-b9b2-5b6e6a132d2f"]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
