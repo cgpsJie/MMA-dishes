@@ -1,3 +1,3 @@
 # MMA dishes
 
-一些好玩的、有用的Mathematica代码
+一些代码自己的尝试
