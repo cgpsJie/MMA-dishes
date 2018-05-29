@@ -136,4 +136,54 @@ Simplify`PWToUnitStep@f[x] /. UnitStep -> ((1 + Tanh[100 #])/2 &)
 Plot[%, {x, -3, 5}]
 ```
 
+## clc
+
+放在"init.m"里面
+ 
+
+```Mathematica
+System`cls := (SelectionMove[InputNotebook[], All, Notebook];
+FrontEndExecute[
+FrontEndToken["Clear"]]);
+(*加入System是防止Clear["Global`*"]会清除clc的定义*)
+```
+
+
+## 查看 Integrate 的方法
+
+https://mathematica.stackexchange.com/questions/26401/determining-which-rule-nintegrate-selects-automatically
+
+```Mathematica
+symbNames = Names["NIntegrate`*"];
+symbNames = 
+  Append[Pick[symbNames, 
+    StringMatchQ[
+     symbNames, (__ ~~ "Rule") | (__ ~~ 
+        "Global" | "Local" | "MonteCarlo" | "Principal" | "Levin" | 
+         "Osc" ~~ ___)]], "NIntegrate`AutomaticStrategy"];
+symbs = ToExpression[#] & /@ symbNames;
+dvs = DownValues /@ symbs;
+uvs = UpValues /@ symbs;
+Unprotect /@ symbs;
+dvsNew = MapThread[
+   With[{s = #2}, 
+     DownValues[s] = 
+      ReplaceAll[#1, 
+       HoldPattern[
+         a_ :> b___] :> (a :> (Print["DownValue call for: ", 
+            Style[s, Red]]; b))]] &, {dvs, symbs, symbNames}];
+uvsNew = MapThread[
+   With[{s = #2}, 
+     UpValues[s] = 
+      ReplaceAll[#1, 
+       HoldPattern[Block[vars_, CompoundExpression[b___]]] :> 
+        Block[{res = Block[vars, CompoundExpression[b]]}, 
+         Print["UpValue call for: ", Style[s, Blue], 
+          Style[" ::\n", Blue], res]; res]]] &, {uvs, symbs, 
+    symbNames}];
+
+
+NIntegrate[Sin[x]^2 Sin[1000 x]^2/x^(5/2), {x, 0, Infinity}]
+
+```
 
