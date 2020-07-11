@@ -187,3 +187,12 @@ NIntegrate[Sin[x]^2 Sin[1000 x]^2/x^(5/2), {x, 0, Infinity}]
 
 ```
 
+### 三角函数
+
+```Mathematica
+Tan[1/7 ArcTan[t]] /. 
+  e : (Sin | Cos | Tan | Cot | Csc |  Sec)[(ArcSin | ArcCos | ArcTan | ArcCot | ArcSec | ArcCsc)[_] Rational[1, n_]] :> 
+   First[y /.  Solve[Reduce[{y == e, 0 < t < 2 Pi}, t, Reals] /.  c : (_Sin | _Cos | _Tan | _Cot | _Csc | _Sec) :> 
+           Simplify@TrigExpand[c], y, Reals] // Simplify // Normal // Union] // ToRadicals
+```
+
